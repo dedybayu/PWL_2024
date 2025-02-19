@@ -6,11 +6,15 @@ use Illuminate\Http\Request;
 
 class WelcomeControler extends Controller
 {
-    public function hello(){
+    public function hello()
+    {
         return 'Hello World';
     }
     public function greeting()
     {
-        return view('blog.hello', ['name' => 'Andi']);
+        return view('blog.hello')
+            ->with('name', 'Bayu')
+            ->with('occupation', 'Astronaut');
+        ;
     }
 }
