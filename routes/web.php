@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\WelcomeControler;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -13,6 +14,8 @@ Route::get('/world', function () {
 Route::get('/about', function () {
     return '2341720041';
 });
+
+route::get('/hello', [WelcomeControler::class,'hello']);
 
 
 
