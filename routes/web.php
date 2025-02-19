@@ -4,9 +4,9 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\WelcomeControler;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/user/{name?}', function ($name = 'bayu') {
-    return 'Nama saya ' . $name;
-});
+// Route::get('/user/{name?}', function ($name = 'bayu') {
+//     return 'Nama saya ' . $name;
+// });
 
 Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
     return 'Pos ke-' . $postId . " Komentar ke-: " . $commentId;
@@ -17,8 +17,9 @@ Route::get('/articles/{id}', function ($id) {
 });
 
 
-
-
+Route::get('/user/{name?}', function ($name = 'John') {
+    return 'Nama saya ' . $name;
+});
 
 
 Route::get('/', [PageController::class, 'hello']);
