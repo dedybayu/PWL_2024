@@ -2,6 +2,21 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', function () {
+    return 'Selamat Datang';
+});
+
+Route::get('/world', function () {
+    return 'World';
+});
+
+Route::get('/about', function () {
+    return '2341720041';
+});
+
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +28,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
