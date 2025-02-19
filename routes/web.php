@@ -45,9 +45,7 @@ Route::resource('photos', PhotoController::class)->except([
     'create', 'store', 'update', 'destroy'
 ]);
 
-Route::get('/greeting', function(){
-    return view('blog.hello', ['name'=>'Bayu']);
-});
+Route::get('/greeting', [WelcomeControler::class, 'greeting']);
 
 
 /*

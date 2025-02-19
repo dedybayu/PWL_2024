@@ -10,8 +10,5 @@ class HomeController extends Controller
     {
         return 'Selamat Datang';
     }
-    public function greeting()
-    {
-        return view('blog.hello', ['name' => 'Andi']);
-    }
+
 }
